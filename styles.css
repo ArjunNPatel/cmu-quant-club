@@ -1,24 +1,25 @@
 /* styles.css */
 
 body {
+  font-family: 'Open Sans', sans-serif;
     
     background-color: white;
     color: black;
   }
   
-  .main-section {
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-  }
   
   .main-text {
+    position: absolute;
+    height: 30%;
+    width: 40%;
+    left: 5%;
+    top: 40%;
+
     text-align:center;
-    max-width: 50%;
-    font-size: 4vw;
+    font-size: calc(3vh + 3vw);
     font-weight: bold;
+    z-index:1;
   }
   
   .red {
@@ -26,14 +27,19 @@ body {
   }
   
   
-  .right-side {
-    font-family: 'Source Serif Pro', serif;
-    width: 60%;
+  .nav-bar {
+    position:fixed;
     font-size:3vw;
-    text-align:center;
+    width: 100%;
+    text-align: center;
+    bottom:0%;
   }
   .clean-link {
     text-decoration: none;
-    color:black
+    color: #6D6e71
   }
-  
+  img#waves {
+    position: absolute;
+    top:30vh;
+    z-index: 0;
+  }
