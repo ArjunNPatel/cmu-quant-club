@@ -5,12 +5,12 @@ var spikes = 500;
 var arr = [];
 var colors = [];
 function setup() {
-  var cnv = createCanvas(window.innerWidth, hscale*window.innerHeight);
+  var cnv = createCanvas(windowWidth, hscale*windowHeight);
   frameRate(24);
   noFill();
-  cnv.position(0,.30*window.innerHeight);
- points = window.innerWidth;
- numWaves = hscale*window.innerHeight / 8 - 2;
+  cnv.position(0,.30*windowHeight);
+ points = windowWidth;
+ numWaves = hscale*windowHeight / 8 - 2;
  for(var i = 0; i < spikes; i++) {
   arr.push(Math.random());
 }
@@ -51,7 +51,7 @@ function draw() {
  
 }
 function windowResized() {
-  cnx = resizeCanvas(window.innerWidth, hscale*window.innerHeight);
-  points = window.innerWidth;
-  numWaves = hscale*window.innerHeight / 8 - 2;
+  cnx = resizeCanvas(windowWidth, hscale*windowHeight);
+  points = windowWidth;
+  numWaves = hscale*windowHeight / 8 - 2;
 }
