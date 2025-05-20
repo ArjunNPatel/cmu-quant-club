@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
     
     background-color: white;
     color: black;
@@ -11,27 +11,38 @@ body {
   
   .main-text {
     position: absolute;
-    height: 30%;
-    width: 40%;
+    height: 50%;
+    width: 100%;
     left: 5%;
-    top: 40%;
-
-    text-align:center;
-    font-size: calc(3vh + 3vw);
+    top: 30%;
+    align-content: center;
+    font-size: calc(min(10vw, 10vh));
     font-weight: bold;
     z-index:1;
   }
   
   .red {
-    color: #c41230;
+    color: #c41230
+  }
+  .iron-grey {
+    color:#6D6e71
   }
   
-  
+  .header {
+    position: absolute;
+    width: 30%;
+    left: 70%;
+    text-align: center;
+    color:#6D6e71;
+    font-size: calc(2*min(1vw,1vh));
+  }
   .nav-bar {
     position:fixed;
-    font-size:3vw;
+    font-size: calc(5*min(1vw, 1vh));
     width: 100%;
+    height: 20%;
     text-align: center;
+    align-content: center;
     bottom:0%;
   }
   .clean-link {

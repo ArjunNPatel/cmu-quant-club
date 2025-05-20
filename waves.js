@@ -16,14 +16,14 @@ for(var i = 0; i < points; i++) {
 function draw() {
 
   var colors = [
-    color(232, 0, 0, 80)
+    color(239, 58, 71)
   ];
   background(255,255,255);
   for (var l = 0; l < numWaves; l++) {
     stroke(colors[0]);
     strokeWeight(1);
     beginShape();
-    for (var x = 0; x <= points; x += 5) {
+    for (var x = -points / 2; x <= 3*points /2; x += 5) {
       // Big
       var freq1 = 0.8;
       var amp1 = 4; 
@@ -36,7 +36,7 @@ function draw() {
       amp1 * Math.sin(Math.PI/180* (freq1 * x + phase1)) +
       amp2 * Math.sin(Math.PI/180*(freq2 * x + phase2));
       
-      vertex(x, y + 5*arr[(x + l*3) % 500]);
+      vertex(x, y + 5*arr[(x + l*3) % points]);
     }
     endShape();
   }
