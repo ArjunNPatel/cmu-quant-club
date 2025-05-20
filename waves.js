@@ -1,16 +1,19 @@
 var hscale = 0.5
+var points = 2000;
+var numWaves = 30;
+var spikes = 500;
 function setup() {
   var cnv = createCanvas(window.innerWidth, hscale*window.innerHeight);
   frameRate(24);
   noFill();
   cnv.position(0,.30*window.innerHeight);
+ points = window.innerWidth;
+ numWaves = hscale*window.innerHeight / 8 - 2;
 }
-var points = window.innerWidth;
-var numWaves = hscale*window.innerHeight / 8 - 2;
-var t = 0; // time variable
+ var t = 0; // time variable
 var change = 1;
 var arr = [];
-for(var i = 0; i < points; i++) {
+for(var i = 0; i < spikes; i++) {
     arr.push(Math.random());
 }  
 function draw() {
@@ -36,7 +39,7 @@ function draw() {
       amp1 * Math.sin(Math.PI/180* (freq1 * x + phase1)) +
       amp2 * Math.sin(Math.PI/180*(freq2 * x + phase2));
       
-      vertex(x, y + 5*arr[(x + l*3) % points]);
+      vertex(x, y + 5*arr[Math.abs((x + l*3) % spikes)]);
     }
     endShape();
   }
@@ -44,7 +47,7 @@ function draw() {
   if(Math.abs(t) > 10000) {
       change = -1*change;
   }
-  arr[Math.floor(Math.random()*points)] = Math.random();
+  arr[Math.abs(Math.floor(Math.random()*spikes) % spikes)] = Math.random();
  
 }
 function windowResized() {
