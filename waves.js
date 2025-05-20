@@ -15,7 +15,7 @@ function setup() {
   arr.push(Math.random());
 }
 colors = [
-  color(239, 58, 71)]
+  color(239, 58, 71)];
 }
  var t = 0; 
 var change = 1;
