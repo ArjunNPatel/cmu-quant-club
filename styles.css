@@ -31,8 +31,8 @@ body {
   .header {
     position: absolute;
     width: 35%;
-    left: 65%;
-    text-align: center;
+    right: 2%;
+    text-align: right;
     color:#6D6e71;
     font-size: calc(2*min(1vw,1vh));
   }

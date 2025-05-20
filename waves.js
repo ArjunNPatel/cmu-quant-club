@@ -2,6 +2,8 @@ var hscale = 0.5
 var points = 2000;
 var numWaves = 30;
 var spikes = 500;
+var arr = [];
+var colors = [];
 function setup() {
   var cnv = createCanvas(window.innerWidth, hscale*window.innerHeight);
   frameRate(24);
@@ -9,18 +11,16 @@ function setup() {
   cnv.position(0,.30*window.innerHeight);
  points = window.innerWidth;
  numWaves = hscale*window.innerHeight / 8 - 2;
+ for(var i = 0; i < spikes; i++) {
+  arr.push(Math.random());
 }
- var t = 0; // time variable
+colors = [
+  color(239, 58, 71)]
+}
+ var t = 0; 
 var change = 1;
-var arr = [];
-for(var i = 0; i < spikes; i++) {
-    arr.push(Math.random());
-}  
+  
 function draw() {
-
-  var colors = [
-    color(239, 58, 71)
-  ];
   background(255,255,255);
   for (var l = 0; l < numWaves; l++) {
     stroke(colors[0]);
