@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
+  background-color: white;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 2vw;
+  
+  }
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  align-content: center;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.5vw;
+  padding:1vw;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #e0e0e0;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+
+}
+
+.triangle1 {
+      position: absolute;
+      left: calc(100vw - 50*min(1vw, 1vh));
+      bottom: 0;
+      width: calc(50*min(1vw, 1vh));
+      height: calc(50*min(1vw, 1vh));
+      background-color: #c41230;
+      clip-path: polygon(100% 0%, 100% 100%, 0 100%);
+    }
+    
+</style>
 </head>
 <body>
-    <p> People + Contact content </p>
+<a href = "index.html">
+<img src = "abc" alt="logo"> 
+</a>
+<div>
+  <div class="column">
+    <h1>Executive Board</h1> <hr>
+    <div class="tab">
+      <button class="tablinks" onclick="getPerson(event, 'President')">President</button>
+      <button class="tablinks" onclick="getPerson(event, 'Finance')">VP Finance</button>
+      <button class="tablinks" onclick="getPerson(event, 'Marketing')">VP Marketing</button>
+      <button class="tablinks" onclick="getPerson(event, 'Logistics')">VP Logistics</button>
+      <button class="tablinks" onclick="getPerson(event, 'Technology')">VP Technology</button>
+      <button class="tablinks" onclick="getPerson(event, 'Public Relations')">VP Public Relations</button>
+      <button class="tablinks" onclick="getPerson(event, 'Secretary')">Secretary <br></button>
+    </div>
+    
+    
+    <div id="Opening" class = "tabcontent" style = "display:block">
+      <p>Default image</p>
+    </div>
+    <div id="President" class="tabcontent">
+      <h3>Darren Grendi</h3>
+      <p>London is the capital city of England.</p>
+         </div>
+    <div id="Finance" class="tabcontent">
+      <h3>Rishi Prabhu</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+    <div id="Marketing" class="tabcontent">
+      <h3>Joshua Wang</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+    <div id="Logistics" class="tabcontent">
+      <h3>Alex Zheng</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+    <div id="Technology" class="tabcontent">
+      <h3>Arjun Patel</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+    <div id="Public Relations" class="tabcontent">
+      <h3>Jacob Braginsky</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+    <div id="Secretary" class="tabcontent">
+      <h3>Troy Wang</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+      </div>
+  <div class="column">
+    <h1>Stay in Touch</h1>
+    <hr>
+    <div style = "font-size: calc(3*min(1vw, 1vh)); ">
+    <p> For inquiries, please email <a href = "mailto:quantclub.cmu@gmail.com" style = "text-decoration:none; color: #6D6e71;"> quantclub.cmu@gmail.com  </a> </p><p>
+      Our main form of communication is a mailing list. You can subscribe to it <br>   
+  <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" style = "text-decoration: none; color:#6D6e71 "  >here.
+    </a></p>
+    </div>
+  <div class = "triangle1"> &nbsp;</div>
+  </div>
+</div>
+
+<script>
+  function getPerson(evt, Name) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(Name).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+    
 </body>
 </html>
