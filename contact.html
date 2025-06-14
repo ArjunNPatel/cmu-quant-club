@@ -8,7 +8,8 @@
 }
 body {
   font-family: 'Open Sans', 'Helvetica', sans-serif;
-  background-color: white;
+  background-color: black;
+  color:white
 }
 .column {
   float: left;
@@ -22,9 +23,11 @@ body {
   align-content: center;
 }
 
+
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
+  color:inherit;
   float: left;
   border: none;
   outline: none;
@@ -36,7 +39,8 @@ body {
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #e0e0e0;
+  border-color: #6D6e71;
+  color: #EF3A47;
 }
 
 /* Style the tab content */
@@ -48,11 +52,11 @@ body {
 
 .triangle1 {
       position: absolute;
-      left: calc(100vw - 50*min(1vw, 1vh));
+      left: calc(100vw - 40*min(1vw, 1vh));
       bottom: 0;
-      width: calc(50*min(1vw, 1vh));
-      height: calc(50*min(1vw, 1vh));
-      background-color: #c41230;
+      width: calc(40*min(1vw, 1vh));
+      height: calc(40*min(1vw, 1vh));
+      background-color: #EF3A47;
       clip-path: polygon(100% 0%, 100% 100%, 0 100%);
     }
     
@@ -112,15 +116,24 @@ body {
     <h1>Stay in Touch</h1>
     <hr>
     <div style = "font-size: calc(3*min(1vw, 1vh)); ">
-    <p> For inquiries, please email <a href = "mailto:quantclub.cmu@gmail.com" style = "text-decoration:none; color: #6D6e71;"> quantclub.cmu@gmail.com  </a> </p><p>
-      Our main form of communication is a mailing list. You can subscribe to it <br>   
-  <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" style = "text-decoration: none; color:#6D6e71 "  >here.
+    <p> For inquiries, please email <a href = "mailto:quantclub.cmu@gmail.com" style = "text-decoration:none; color: #EF3A47;"> quantclub.cmu@gmail.com  </a> </p><p>
+      Our main form of communication is a mailing list. You can subscribe to it   
+  <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" style = "text-decoration: none; color:#EF3A47 "  >here.
     </a></p>
     </div>
   <div class = "triangle1"> &nbsp;</div>
   </div>
 </div>
-
+ <footer> <section>
+  <div class="nav-bar">
+    <h6 class = 'nav-bar'><a href="index.html" class = "clean-link"> Home &ensp; </a>
+      <a href="events.html" class = "clean-link">Events &ensp;</a>
+      <a href="resources.html" class = "clean-link">Resources &ensp;</a>
+      <a href="contact.html"class = "clean-link" >Contact</a></h6>
+    </div>
+  </div>
+</section>
+ </footer>
 <script>
   function getPerson(evt, Name) {
     var i, tabcontent, tablinks;

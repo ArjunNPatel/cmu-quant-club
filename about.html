@@ -4,8 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About</title>
-  <link rel="stylesheet" href="styles.css" />
 </head>
+<style> 
+* {
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
+    font-size: clamp(16px, 5vw, 50px);
+}
+
+body {
+    background-color: black;
+    color:white
+}
+
+span {
+    opacity: .1;
+}
+
+#bottom {
+    margin-bottom: 50vh;
+}
+
+.clean-link {
+    text-decoration: none;
+    color: white;
+    font-size: calc(5*min(1vw, 1vh));
+  }
+.nav-bar{
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;  
+}  
+
+p {
+    font-family: 'Montserrat', 'Avenir', 'Roboto', sans-serif ;
+  }
+h6 {
+  font-weight: normal;
+}
+
+
+</style>
 <body>
   <h1>The CMU Quant Club</h1>
 
@@ -19,40 +57,45 @@
 
   <h2>Flagship Events</h2>
 
-  <div class="event">
-    <div class="vertical-header"><h3>Quantathon</h3></div>
-    <div class="event-content">
+  <div >
+    <div ><h3>Quantathon</h3></div>
+    <div>
       <p><i>Quantathon</i> brings together students from a variety of backgrounds to tackle interesting and challenging problems in computational finance. Quantathon is usually held during the spring semester.</p>
       <p>One of the founders of Quant Club, Sijie Wei, said:</p>
-      <blockquote>
+      <p>
         We love working around great minds to solve great problems... This
         competition is a great opportunity for students to apply their quantitative skills such as mathematics, probability, statistical analysis and so on in the field of finance.
-      </blockquote>
+      </p>
       <p>One sophomore math major who won the first place in Quantathon 2019, Gunmay Handa, said:</p>
-      <blockquote>
+      <p>
         There’s a sense of satisfaction that comes from putting ideas together from different areas of math and pushing harder and harder until you finally solve it...
-      </blockquote>
+      </p>
       <p>Read more about Quantathon <a href="https://www.cmu.edu/math/news-events/articles/20230313_quantathon.html">here</a>.</p>
     </div>
   </div>
 
-  <div class="event">
-    <div class="vertical-header"><h3>Market Making Game</h3></div>
-    <div class="event-content">
+  <div >
+    <div><h3>Market Making Game</h3></div>
+    <div >
       <p>The <i>Market Making Game</i> is a thought-provoking event combining estimation, negotiation and optimization.</p>
-      <p>Twenty-five teams started the game with contracts and some (fake) cash... </p>
+      <p>Twenty-five teams started the game with contracts and some (fake) cash. Throughout five rounds of play, team had to use their cash to buy contracts of sell contracts to make more cash. However, there was a catch. They didn't actually know the value of the contracts. Instead, each round rotated through questions about the economy, mathematical puzzles and general trivia that teams had to solve to reveal the price of contracts   </p>
       <p>A senior computational finance major, Dallas Foster, said:</p>
-      <blockquote>
+      <p>
         The most challenging part is the uncertainty that comes from not knowing the exact value of the contract...
-      </blockquote>
+      <p>
       <p>Read more about the 2023 Market Making Game <a href="https://www.cmu.edu/mcs/news-events/2023/0428_market-making-game.html">here</a>.</p>
     </div>
   </div>
 
   <section>
-    <div class="iron-grey">
-      <p><a href="index.html" class="clean-link">Home &ensp;</a></p>
+    <div class="nav-bar">
+      <h6 class = 'nav-bar'><a href="index.html" class = "clean-link"> Home &ensp; </a>
+        <a href="events.html" class = "clean-link">Events &ensp;</a>
+        <a href="resources.html" class = "clean-link">Resources &ensp;</a>
+        <a href="contact.html"class = "clean-link" >Contact</a></h6>
+      </div>
     </div>
   </section>
+  <script src = "about_text.js"> </script>
 </body>
 </html>

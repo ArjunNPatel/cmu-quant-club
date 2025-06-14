@@ -3,8 +3,8 @@
 body {
   font-family: 'Open Sans', 'Helvetica', sans-serif;
     
-    background-color:  white;
-    color: black;
+    background-color:  black;
+    color: white;
   }
   
 
@@ -19,10 +19,11 @@ body {
     font-size: calc(min(10vw, 10vh));
     font-weight: bold;
     z-index:1;
+
     }
   
   .red {
-    color: #c41230;
+    color: #EF3a47;
   }
   .iron-grey {
     color:#6D6e71;
@@ -33,7 +34,7 @@ body {
     width: 40vw;
     right: 2vw;
     text-align: right;
-    color:#6D6e71;
+    color: white;
     font-size: calc(2*min(1vw,1vh));
   }
   .nav-bar {
@@ -48,7 +49,7 @@ body {
   }
   .clean-link {
     text-decoration: none;
-    color: #6D6e71
+    color: white
   }
 
   .table {
@@ -57,3 +58,4 @@ body {
     text-align: center;
     border: 1px solid black;
   }
+

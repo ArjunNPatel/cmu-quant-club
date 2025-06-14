@@ -7,7 +7,6 @@ var colors = [];
 function setup() {
   var cnv = createCanvas(windowWidth, hscale*windowHeight);
   frameRate(24);
-  noFill();
   cnv.position(0,.30*windowHeight);
  points = windowWidth;
  numWaves = hscale*windowHeight / 8 - 2;
@@ -21,11 +20,11 @@ colors = [
 var change = 1;
   
 function draw() {
-  background(255,255,255);
+  background(0,0,0);
   for (var l = 0; l < numWaves; l++) {
     stroke(colors[0]);
     strokeWeight(1);
-    beginShape();
+    beginShape(POINTS);
     for (var x = -points / 2; x <= 3*points /2; x += 5) {
       // Big
       var freq1 = 0.8;
