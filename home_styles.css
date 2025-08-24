@@ -1,8 +1,16 @@
 /* styles.css */
 
+@font-face {
+  font-family: OpenSans;
+  src: url("fonts/OpenSans-Variable.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: Mon;
+  src: url("fonts/Montserrat-Variable.ttf") format("truetype")
+}
+
 body {
-  font-family: 'Open Sans', 'Helvetica', sans-serif;
-    
     background-color:  black;
     color: white;
   }
@@ -10,14 +18,15 @@ body {
 
   
   .main-text {
+    font-family: OpenSans, sans-serif;
     position: absolute;
     height: 50vh;
     width: 95vw;
     left: 5vw;
     top: 30vh;
     align-content: center;
-    font-size: calc(min(10vw, 10vh));
-    font-weight: bold;
+    font-size: 5rem;
+    font-weight: 300;
     z-index:1;
 
     }
@@ -30,21 +39,27 @@ body {
   }
   
   .header {
+    font-family: OpenSans, sans-serif;
+    font-weight: 300;
     position: absolute;
     width: 40vw;
     right: 2vw;
     text-align: right;
     color: white;
-    font-size: calc(2*min(1vw,1vh));
+    font-size: 1rem;
+    z-index: 1;
   }
   .nav-bar {
+    font-family: Mon, sans-serif;
     position: absolute;
-    font-size: calc(5*min(1vw, 1vh));
+    font-weight: 200;
+    font-size: 2.5rem;
     width: 100vw;
     height: 20%;
     text-align: center;
     align-content: center;
-    bottom: 0%
+    bottom: 0%;
+    z-index: 1;
     
   }
   .clean-link {

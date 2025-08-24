@@ -3,29 +3,35 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+@font-face {
+  font-family: OpenSans;
+  src: url("fonts/OpenSans-Variable.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Mon;
+  src: url("fonts/Montserrat-Variable.ttf") format("truetype")
+}
 * {
   box-sizing: border-box;
 }
+
 body {
-  font-family: 'Open Sans', 'Helvetica', sans-serif;
+  font-family: Mon, 'Helvetica', sans-serif;
   background-color: black;
   color:white
 }
-.column {
-  float: left;
-  width: 50%;
-  padding: 2vw;
-  
-  }
-/* Style the tab */
+
 .tab {
+  font-family: OpenSans;
   overflow: hidden;
   align-content: center;
 }
 
 
-/* Style the buttons inside the tab */
 .tab button {
+  font-family: OpenSans;
   background-color: inherit;
   color:inherit;
   float: left;
@@ -33,42 +39,54 @@ body {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   padding:1vw;
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
   border-color: #6D6e71;
   color: #EF3A47;
 }
 
-/* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
 
 }
 
-.triangle1 {
-      position: absolute;
-      left: calc(100vw - 40*min(1vw, 1vh));
-      bottom: 0;
-      width: calc(40*min(1vw, 1vh));
-      height: calc(40*min(1vw, 1vh));
-      background-color: #EF3A47;
-      clip-path: polygon(100% 0%, 100% 100%, 0 100%);
+.column {
+  float: left;
+  width: 50%;
+  padding: 1vw;
+  height: 100%;
+  
+  }
+.nav-bar{
+    position: fixed;
+    bottom: 0;
+    width: 50vw;
+    text-align: center;
+    align-content: center;
+      
+    }
+.clean-link{
+      font-family: Mon, 'Helvetica', sans-serif;
+      font-weight: normal;
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 200;
     }
     
 </style>
 </head>
 <body>
 <a href = "index.html">
-<img src = "abc" alt="logo"> 
+<img src = "QuantClubWhite.png" alt="logo" style = "width:37px;height:35px;"> 
 </a>
 <div>
   <div class="column">
-    <h1>Executive Board</h1> <hr>
+    <h1 style = "font-family: OpenSans, sans-serif; font-weight: 300;">Executive Board</h1> <hr>
     <div class="tab">
       <button class="tablinks" onclick="getPerson(event, 'President')">President</button>
       <button class="tablinks" onclick="getPerson(event, 'Finance')">VP Finance</button>
@@ -85,7 +103,8 @@ body {
     </div>
     <div id="President" class="tabcontent">
       <h3>Darren Grendi</h3>
-      <p>London is the capital city of England.</p>
+      <p>is a Computational Finance and Computer Science Major.
+        Reach out at dgrendi@andrew.cmu.edu </p>
          </div>
     <div id="Finance" class="tabcontent">
       <h3>Rishi Prabhu</h3>
@@ -113,27 +132,26 @@ body {
     </div>
       </div>
   <div class="column">
-    <h1>Stay in Touch</h1>
+    <h1 style = "font-family: OpenSans, sans-serif; font-weight: 300;">Stay in Touch</h1>
     <hr>
-    <div style = "font-size: calc(3*min(1vw, 1vh)); ">
+    
+    <div style = "font-size: 1.25rem; ">
     <p> For inquiries, please email <a href = "mailto:quantclub.cmu@gmail.com" style = "text-decoration:none; color: #EF3A47;"> quantclub.cmu@gmail.com  </a> </p><p>
       Our main form of communication is a mailing list. You can subscribe to it   
-  <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" style = "text-decoration: none; color:#EF3A47 "  >here.
+  <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" style = "text-decoration: none; color:#EF3A47 "  >here. 
     </a></p>
+          <div class="nav-bar">
+        <h6 class = 'nav-bar'><a href="index.html" class = "clean-link">Home&ensp;</a>
+          <a href="about.html"class = "clean-link" >About&ensp;</a>
+          <a href="events.html" class = "clean-link">Events&ensp;</a> 
+          <a href="resources.html" class = "clean-link">Resources</a> </h6> 
+        </div>
+      </div>
+    
     </div>
-  <div class = "triangle1"> &nbsp;</div>
-  </div>
+    </div>
 </div>
- <footer> <section>
-  <div class="nav-bar">
-    <h6 class = 'nav-bar'><a href="index.html" class = "clean-link"> Home &ensp; </a>
-      <a href="events.html" class = "clean-link">Events &ensp;</a>
-      <a href="resources.html" class = "clean-link">Resources &ensp;</a>
-      <a href="contact.html"class = "clean-link" >Contact</a></h6>
-    </div>
-  </div>
-</section>
- </footer>
+
 <script>
   function getPerson(evt, Name) {
     var i, tabcontent, tablinks;
@@ -148,6 +166,7 @@ body {
     document.getElementById(Name).style.display = "block";
     evt.currentTarget.className += " active";
   }
+  document.getElementsByClassName('tablinks')[0].click()
   </script>
     
 </body>
