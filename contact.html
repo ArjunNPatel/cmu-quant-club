@@ -39,7 +39,7 @@ body {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  font-size: 1.5rem;
+  font-size: clamp(0.25rem,max(2vw,2vh),1.5rem);
   padding:1vw;
 }
 
@@ -51,6 +51,7 @@ body {
 .tabcontent {
   display: none;
   padding: 6px 12px;
+  overflow-wrap: break-word;
 
 }
 
@@ -81,10 +82,12 @@ body {
 </style>
 </head>
 <body>
-<a href = "index.html">
-<img src = "QuantClubWhite.png" alt="logo" style = "width:37px;height:35px;"> 
-</a>
-<div>
+  <div>
+    <a href = "index.html">
+      <img src = "QuantClubWhite.png" alt="logo" style = "width:calc(clamp(1rem,2vw,2rem));height:auto;"> 
+      </a>
+    </div>
+    <div>
   <div class="column">
     <h1 style = "font-family: OpenSans, sans-serif; font-weight: 300;">Executive Board</h1> <hr>
     <div class="tab">
@@ -103,40 +106,47 @@ body {
     </div>
     <div id="President" class="tabcontent">
       <h3>Darren Grendi</h3>
-      <p>is a Computational Finance and Computer Science Major.
-        Reach out at dgrendi@andrew.cmu.edu </p>
+      <p>is a Computational Finance and Computer Science Major. <br>
+         dgrendi@andrew.cmu.edu </p>
          </div>
     <div id="Finance" class="tabcontent">
       <h3>Rishi Prabhu</h3>
-      <p>London is the capital city of England.</p>
+      <p> is a Computational Finance and Computer Science Major. <br>
+        rprabhu2@andrew.cmu.edu</p>
     </div>
     <div id="Marketing" class="tabcontent">
       <h3>Joshua Wang</h3>
-      <p>London is the capital city of England.</p>
+      <p> is a Finance and Applied Math Major. <br> 
+        joshuaw2@andrew.cmu.edu
+      </p>
     </div>
     <div id="Logistics" class="tabcontent">
       <h3>Alex Zheng</h3>
-      <p>London is the capital city of England.</p>
+      <p>is a Computer Science Major. <br> 
+        alexzhen@andrew.cmu.edu</p>
     </div>
     <div id="Technology" class="tabcontent">
       <h3>Arjun Patel</h3>
-      <p>London is the capital city of England.</p>
+      <p>is a Computational Finance Major. <br> 
+      arjunp2@andrew.cmu.edu</p>
     </div>
     <div id="Public Relations" class="tabcontent">
       <h3>Jacob Braginsky</h3>
-      <p>London is the capital city of England.</p>
+      <p> is a Mathematical Sciences Major. <br> 
+        jbragins@andrew.cmu.edu</p>
     </div>
     <div id="Secretary" class="tabcontent">
       <h3>Troy Wang</h3>
-      <p>London is the capital city of England.</p>
+      <p>is a Computational Finance and StatML Major. <br> 
+        tengyiw@andrew.cmu.edu</p>
     </div>
       </div>
   <div class="column">
     <h1 style = "font-family: OpenSans, sans-serif; font-weight: 300;">Stay in Touch</h1>
     <hr>
     
-    <div style = "font-size: 1.25rem; ">
-    <p> For inquiries, please email <a href = "mailto:quantclub.cmu@gmail.com" style = "text-decoration:none; color: #EF3A47;"> quantclub.cmu@gmail.com  </a> </p><p>
+    <div style = "font-size: 1rem; ">
+    <p style = "overflow-wrap: break-word;"> For inquiries, please email <a href = "mailto:quantclub.cmu@gmail.com" style = "text-decoration:none; color: #EF3A47;"> quantclub.cmu@gmail.com  </a> </p><p>
       Our main form of communication is a mailing list. You can subscribe to it   
   <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" style = "text-decoration: none; color:#EF3A47 "  >here. 
     </a></p>

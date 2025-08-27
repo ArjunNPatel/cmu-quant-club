@@ -14,6 +14,9 @@
   font-family: Mon;
   src: url("fonts/Montserrat-Variable.ttf");
 }
+:root {
+  --cmured:#EF3a47;
+}
 
 body {
     background-color: black;
@@ -24,8 +27,10 @@ body {
 }
 p {
   font-family: Mon;
+  font-weight: 400;
   font-size: 1rem;
 }
+ 
 
 
 .clean-link {
@@ -55,52 +60,20 @@ h1 {
 
 </style>
 <body>
+  <div>
   <a href = "index.html">
-    <img src = "QuantClubWhite.png" alt="logo" style = "width:37px;height:auto;"> 
+    <img src = "QuantClubWhite.png" alt="logo" style = "width:calc(clamp(1rem,2vw,2rem));height:auto;"> 
     </a>
-  
+  </div>
     <h1>The CMU Quant Club</h1>
 
   <p>
-    focuses on the study of quantitative finance, more specifically areas in finance
-    where the study of mathematics and other computational aspects are emphasized. We host events that provide opportunities for undergraduates to get
-    familiar with the quantitative finance industry; these include the
-    <b>Quantathon, Market Making Game, Mock Interviews, Resume Workshop, lecture series</b>,
-    and <b>seminars</b>.
+    focuses on the study of <span style= "color: var(--cmured)"> quantitative finance</span>, a branch of finance that uses advanced <span style= "color: var(--cmured)"> mathematical </span>  and <span style= "color: var(--cmured)"> computational </span> techniques. 
+    We host events that help undergraduates <span style= "color: var(--cmured)"> learn </span> about and <span style= "color: var(--cmured)"> connect </span> with the quantitative finance industry; these include 
+    mock interviews, resume workshops, lecture series, seminars, and our flagship events, the <span style= "color: var(--cmured)"> Quantathon </span> and the <span style= "color: var(--cmured)"> Market Making Game</span>.
   </p>
-
-  <h2>Flagship Events</h2>
-
-  <div >
-    <div ><h3>Quantathon</h3></div>
-    <div>
-      <p><i>Quantathon</i> brings together students from a variety of backgrounds to tackle interesting and challenging problems in computational finance. Quantathon is usually held during the spring semester.</p>
-      <p>One of the founders of Quant Club, Sijie Wei, said:</p>
-      <p>
-        We love working around great minds to solve great problems... This
-        competition is a great opportunity for students to apply their quantitative skills such as mathematics, probability, statistical analysis and so on in the field of finance.
-      </p>
-      <p>One sophomore math major who won the first place in Quantathon 2019, Gunmay Handa, said:</p>
-      <p>
-        There’s a sense of satisfaction that comes from putting ideas together from different areas of math and pushing harder and harder until you finally solve it...
-      </p>
-      <div class = "clean-link"> <p> <a href="https://www.cmu.edu/math/news-events/articles/20230313_quantathon.html"> Read more about Quantathon here</a> </p></div>
-    </div>
-  </div>
-
-  <div >
-    <div><h3>Market Making Game</h3></div>
-    <div >
-      <p>The <i>Market Making Game</i> is a thought-provoking event combining estimation, negotiation and optimization.</p>
-      <p>Twenty-five teams started the game with contracts and some (fake) cash. Throughout five rounds of play, team had to use their cash to buy contracts of sell contracts to make more cash. However, there was a catch. They didn't actually know the value of the contracts. Instead, each round rotated through questions about the economy, mathematical puzzles and general trivia that teams had to solve to reveal the price of contracts   </p>
-      <p>A senior computational finance major, Dallas Foster, said:</p>
-      <p>
-        The most challenging part is the uncertainty that comes from not knowing the exact value of the contract...
-      <p>
-      <p>Read more about the 2023 Market Making Game <a href="https://www.cmu.edu/mcs/news-events/2023/0428_market-making-game.html">here</a>.</p>
-    </div>
-  </div>
-
+  
+ 
   <section>
     <div class="nav-bar">
       <h6 class = 'nav-bar'><a href="index.html" class = "clean-link"> Home &ensp; </a>
