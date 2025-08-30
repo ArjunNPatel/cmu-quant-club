@@ -19,10 +19,13 @@
 
 body {
   font-family: Mon, 'Helvetica', sans-serif;
-  background-color: black;
-  color:white
+  background-color: white;
+  color:black
 }
-
+.container {
+  display: flex;
+  flex-direction: row;
+}
 .tab {
   font-family: OpenSans;
   overflow: hidden;
@@ -56,16 +59,15 @@ body {
 }
 
 .column {
-  float: left;
-  width: 50%;
+  flex: 1;
   padding: 1vw;
-  height: 100%;
   
   }
 .nav-bar{
-    position: fixed;
-    bottom: 0;
-    width: 50vw;
+    position: absolute;
+    bottom:0;
+    /*background-color: #6D6e71;
+    */width: 100vw;
     text-align: center;
     align-content: center;
       
@@ -73,23 +75,28 @@ body {
 .clean-link{
       font-family: Mon, 'Helvetica', sans-serif;
       font-weight: normal;
-      color: white;
+      color: black;
       text-decoration: none;
       font-size: 1.5rem;
       font-weight: 200;
     }
-    
+ @media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+ }   
 </style>
 </head>
 <body>
   <div>
     <a href = "index.html">
-      <img src = "QuantClubWhite.png" alt="logo" style = "width:calc(clamp(1rem,2vw,2rem));height:auto;"> 
+      <img src = "QuantClubWhite.png" alt="logo" style = "width:50px;height:auto;"> 
       </a>
     </div>
     <div>
+      <div class = "container"> 
   <div class="column">
-    <h1 style = "font-family: OpenSans, sans-serif; font-weight: 300;">Executive Board</h1> <hr>
+    <h1 style = "font-family: OpenSans, sans-serif; font-weight: 300;">25-26 Board</h1> <hr>
     <div class="tab">
       <button class="tablinks" onclick="getPerson(event, 'President')">President</button>
       <button class="tablinks" onclick="getPerson(event, 'Finance')">VP Finance</button>
@@ -146,22 +153,16 @@ body {
     <hr>
     
     <div style = "font-size: 1rem; ">
-    <p style = "overflow-wrap: break-word;"> For inquiries, please email <a href = "mailto:quantclub.cmu@gmail.com" style = "text-decoration:none; color: #EF3A47;"> quantclub.cmu@gmail.com  </a> </p><p>
+    <p style = "overflow-wrap: break-word;"> You can email <a href = "mailto:quantclub.cmu@gmail.com" style = "text-decoration:none; color: #EF3A47;"> quantclub.cmu@gmail.com  </a> </p><p>
       Our main form of communication is a mailing list. You can subscribe to it   
   <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" style = "text-decoration: none; color:#EF3A47 "  >here. 
     </a></p>
-          <div class="nav-bar">
-        <h6 class = 'nav-bar'><a href="index.html" class = "clean-link">Home&ensp;</a>
-          <a href="about.html"class = "clean-link" >About&ensp;</a>
-          <a href="events.html" class = "clean-link">Events&ensp;</a> 
-          <a href="resources.html" class = "clean-link">Resources</a> </h6> 
-        </div>
       </div>
     
     </div>
     </div>
 </div>
-
+</div>
 <script>
   function getPerson(evt, Name) {
     var i, tabcontent, tablinks;
@@ -180,4 +181,11 @@ body {
   </script>
     
 </body>
+<footer>    <div class="nav-bar">
+        <h6 class = 'nav-bar'><a href="index.html" class = "clean-link">Home&ensp;</a>
+          <a href="about.html"class = "clean-link" >About&ensp;</a>
+          <a href="events.html" class = "clean-link">Events&ensp;</a> 
+          <a href="resources.html" class = "clean-link">Resources</a> </h6> 
+        </div>
+      </footer>
 </html>

@@ -11,19 +11,21 @@
 }
 
 body {
-    background-color:  black;
-    color: white;
+    background-color:  white;
+    color: black;
+    font-family: OpenSans, sans-serif;
   }
   
 
-  
-  .main-text {
-    font-family: OpenSans, sans-serif;
-    position: absolute;
-    height: 50vh;
+  #main-filler {
+    height: 30vh;
+    }
+  #main-text {
+    position: relative;
+    height: 70vh;
     width: 95vw;
     left: 5vw;
-    top: 30vh;
+    /*top 30vh; */ 
     align-content: center;
     font-size: calc(clamp(1rem, max(5vw,5vh),5rem));
     font-weight: 300;
@@ -38,33 +40,28 @@ body {
     color:#6D6e71;
   }
   
-  .header {
-    font-family: OpenSans, sans-serif;
+  #header {
     font-weight: 300;
     position: absolute;
-    width: 40vw;
+    width: 50vw;
     right: 2vw;
     text-align: right;
-    color: white;
     font-size: clamp(0.25rem, max(2vw,2vh) , 1rem);
     z-index: 1;
   }
   .nav-bar {
     font-family: Mon, sans-serif;
-    position: absolute;
     font-weight: 300;
     font-size: clamp(0.5rem,max(3vh,3vw),2.5rem);
     width: 100vw;
-    height: 20%;
     text-align: center;
     align-content: center;
-    bottom: 0%;
     z-index: 1;
     
   }
   .clean-link {
     text-decoration: none;
-    color: white
+    color: black;
   }
 
   .table {
