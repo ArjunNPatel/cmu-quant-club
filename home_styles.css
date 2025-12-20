@@ -9,16 +9,40 @@
   font-family: Mon;
   src: url("fonts/Montserrat-Variable.ttf") format("truetype")
 }
+:root {
+  --cmured:#EF3a47;
+  --no-of-slides: 6;
+  --slide-width: 600px;
+  --slide-height: 400px;
+  --iteration-time: 100s;
+
+}
+
 
 body {
     background-color:  white;
     color: black;
     font-family: OpenSans, sans-serif;
+    min-height: 100vh;
+    
   }
   
 
   #main-filler {
     height: 30vh;
+    }
+    #about-us {
+      margin-left: 5vw;
+      margin-right: 5vw;
+      font-size: clamp(1rem, max(2vw,2vh) , 2rem);
+      font-weight: 300;
+    }
+    #Flagship-tabs-header{
+      font-family: OpenSans, sans-serif;
+      font-weight: 300;
+      text-align: center;
+      font-size: clamp(2.5rem, max(2vw,2vh) , 3.5rem);
+      
     }
   #main-text {
     position: relative;
@@ -52,7 +76,8 @@ body {
   .nav-bar {
     font-family: Mon, sans-serif;
     font-weight: 300;
-    font-size: clamp(0.5rem,max(3vh,3vw),2.5rem);
+    color: black;
+    font-size: clamp(0.5rem,max(3vh,3vw),1.5rem);
     width: 100vw;
     text-align: center;
     align-content: center;
@@ -63,6 +88,38 @@ body {
     text-decoration: none;
     color: black;
   }
+  .tab {
+    font-family: OpenSans;
+    overflow: hidden;
+    align-content: center;
+  }
+  
+  
+  .tab button {
+    font-family: OpenSans;
+    background-color: inherit;
+    color:inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: clamp(0.25rem,max(2vw,2vh),1.5rem);
+    padding:1vw;
+  }
+  
+  .tab button.active {
+    border-color: #6D6e71;
+    color: #EF3A47;
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    overflow-wrap: break-word;
+  
+  }
+  
 
   .table {
     width: 100vw;
@@ -70,4 +127,53 @@ body {
     text-align: center;
     border: 1px solid black;
   }
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1));
+  }
+}
+
+.carousel__wrapper {
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel {
+  padding: 100px 0;
+  
+  overflow: hidden;
+  width: calc(2 * var(--no-of-slides));
+}
+
+.carousel__slide {
+  animation: scroll var(--iteration-time) linear infinite;
+  display: flex;
+  flex-direction: column;
+  
+  flex: 0 0 auto;
+  width: var(--slide-width);
+  height: var(--slide-height);
+  box-sizing: border-box;
+  }
+
+.carousel__image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  border-radius: .5rem;
+  
+  height: 100%;
+  
+  margin: 15px 20px;
+}
+
 

@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="home_styles.css">
 <style>
 @font-face {
   font-family: OpenSans;
@@ -17,11 +18,7 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Mon, 'Helvetica', sans-serif;
-  background-color: white;
-  color:black
-}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -63,24 +60,7 @@ body {
   padding: 1vw;
   
   }
-.nav-bar{
-    position: absolute;
-    bottom:0;
-    /*background-color: #6D6e71;
-    */width: 100vw;
-    text-align: center;
-    align-content: center;
-      
-    }
-.clean-link{
-      font-family: Mon, 'Helvetica', sans-serif;
-      font-weight: normal;
-      color: black;
-      text-decoration: none;
-      font-size: 1.5rem;
-      font-weight: 200;
-    }
- @media screen and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
   .container {
     flex-direction: column;
   }
@@ -113,7 +93,7 @@ body {
     </div>
     <div id="President" class="tabcontent">
       <h3>Darren Grendi</h3>
-      <p>is a Computational Finance and Computer Science Major. <br>
+      <p>is a Computational Finance and Computer Science Dual Degree Student. <br>
          dgrendi@andrew.cmu.edu </p>
          </div>
     <div id="Finance" class="tabcontent">
@@ -123,7 +103,7 @@ body {
     </div>
     <div id="Marketing" class="tabcontent">
       <h3>Joshua Wang</h3>
-      <p> is a Finance and Applied Math Major. <br> 
+      <p> is a Computational Finance Major. <br> 
         joshuaw2@andrew.cmu.edu
       </p>
     </div>
@@ -181,11 +161,9 @@ body {
   </script>
     
 </body>
-<footer>    <div class="nav-bar">
-        <h6 class = 'nav-bar'><a href="index.html" class = "clean-link">Home&ensp;</a>
-          <a href="about.html"class = "clean-link" >About&ensp;</a>
-          <a href="events.html" class = "clean-link">Events&ensp;</a> 
-          <a href="resources.html" class = "clean-link">Resources</a> </h6> 
-        </div>
-      </footer>
-</html>
+<footer>  <div class="nav-bar">
+  <a href="events.html" class = "clean-link">Events &ensp;</a>
+  <a href="index.html"class = "clean-link" >Home &ensp;</a> 
+  <a href="sponsors.html" class = "clean-link">Sponsors &ensp;</a> 
+  </div>
+</footer></html>
