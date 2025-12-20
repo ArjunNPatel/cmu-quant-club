@@ -12,8 +12,8 @@
 :root {
   --cmured:#EF3a47;
   --no-of-slides: 6;
-  --slide-width: 600px;
-  --slide-height: 400px;
+  --slide-width: clamp(100px, max(30vh, 30vw), 600px);
+  --slide-height: clamp(66px, max(20vh, 20vw), 400px);
   --iteration-time: 100s;
 
 }
@@ -27,7 +27,11 @@ body {
     
   }
   
-
+p {
+  margin-left: 5vw;
+      margin-right: 5vw;
+      
+}
   #main-filler {
     height: 30vh;
     }
@@ -91,7 +95,11 @@ body {
   .tab {
     font-family: OpenSans;
     overflow: hidden;
-    align-content: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   
@@ -106,6 +114,8 @@ body {
     transition: 0.3s;
     font-size: clamp(0.25rem,max(2vw,2vh),1.5rem);
     padding:1vw;
+    text-align: center;
+    align-content: center;
   }
   
   .tab button.active {
@@ -117,6 +127,7 @@ body {
     display: none;
     padding: 6px 12px;
     overflow-wrap: break-word;
+    min-height: 50vh;
   
   }
   
@@ -148,7 +159,7 @@ body {
 }
 
 .carousel {
-  padding: 100px 0;
+  padding: 2vh 0;
   
   overflow: hidden;
   width: calc(2 * var(--no-of-slides));
@@ -173,7 +184,7 @@ body {
   
   height: 100%;
   
-  margin: 15px 20px;
+  margin:clamp(5px, 1vw ,20px)   clamp(5px, 1vw ,20px);
 }
 
 

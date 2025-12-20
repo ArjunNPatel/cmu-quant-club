@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="home_styles.css">
 <style>
 @font-face {
   font-family: OpenSans;
@@ -16,8 +15,24 @@
 }
 * {
   box-sizing: border-box;
+  font-family: Mon, sans-serif;
+    
 }
-
+.clean-link {
+    text-decoration: none;
+    color: black;
+  }
+.nav-bar {
+    font-family: Mon, sans-serif;
+    font-weight: 300;
+    color: black;
+    font-size: clamp(0.5rem,max(3vh,3vw),1.5rem);
+    width: 100vw;
+    text-align: center;
+    align-content: center;
+    z-index: 1;
+    
+  }
 
 .container {
   display: flex;
@@ -58,12 +73,20 @@
 .column {
   flex: 1;
   padding: 1vw;
+  min-height: 80vh; 
   
   }
   @media screen and (max-width: 800px) {
   .container {
     flex-direction: column;
   }
+  .column {
+  flex: 1;
+  padding: 1vw;
+  min-height: 40vh; 
+  
+  }
+
  }   
 </style>
 </head>
@@ -135,8 +158,8 @@
     <div style = "font-size: 1rem; ">
     <p style = "overflow-wrap: break-word;"> You can email <a href = "mailto:quantclub.cmu@gmail.com" style = "text-decoration:none; color: #EF3A47;"> quantclub.cmu@gmail.com  </a> </p><p>
       Our main form of communication is a mailing list. You can subscribe to it   
-  <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" style = "text-decoration: none; color:#EF3A47 "  >here. 
-    </a></p>
+  <a href="https://lists.andrew.cmu.edu/mailman/listinfo/cmu-quant" style = "text-decoration: none; color:#EF3A47 "  >here.  </a>You can also follow us on  <a style = "text-decoration:none; color: #EF3A47;" href = "https://www.linkedin.com/company/cmuquant/">LinkedIn</a>. 
+    </p>
       </div>
     
     </div>
