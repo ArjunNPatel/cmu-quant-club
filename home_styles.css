@@ -60,7 +60,50 @@ p {
     z-index:1;
 
     }
-  
+    #mmg_description {
+      margin-right: 10vw;
+      margin-left: 50vw;
+      font-size: calc(clamp(1rem, max(5vw,5vh),1.5rem));
+    }
+    .mmg_pic_container {
+      left: 10vw;
+      top: 5vh;
+      position: absolute;
+      width: 40vw;
+      height: 40vh;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .mmg_pic_container img {
+    
+      width: 100%;
+  height: 100%;
+  object-fit: cover;
+          
+    }
+    #quantathon_description {
+      margin-left: 10vw;
+      margin-right: 50vw;
+      font-size: calc(clamp(1rem, max(5vw,5vh),1.5rem));
+    }
+    .q_pic_container {
+      right: 10vw;
+      top: 5vh;
+      position: absolute;
+      width: 40vw;
+      height: 40vh;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .q_pic_container img {
+    
+      width: 100%;
+  height: 100%;
+  object-fit: cover;
+          
+    }
   .red {
     color: #EF3a47;
   }
@@ -69,13 +112,14 @@ p {
   }
   
   #header {
-    font-weight: 300;
+    font-weight: 500;
     position: absolute;
     width: 50vw;
     right: 2vw;
     text-align: right;
     font-size: clamp(0.25rem, max(2vw,2vh) , 1rem);
     z-index: 1;
+
   }
   .nav-bar {
     font-family: Mon, sans-serif;
@@ -128,6 +172,7 @@ p {
     padding: 6px 12px;
     overflow-wrap: break-word;
     min-height: 50vh;
+    position:relative;
   
   }
   

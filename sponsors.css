@@ -1,0 +1,15 @@
+/* style.css */
+@font-face {
+    font-family: Mon;
+    src: url("fonts/Montserrat-Variable.ttf");
+}
+@font-face {
+    font-family: OpenSans;
+    src: url("fonts/OpenSans-Variable.ttf")
+}
+#Sponsors-header{
+    font-family: OpenSans, sans-serif;
+    font-weight: 300;
+    font-size: clamp(2.5rem, max(2vw,2vh) , 3.5rem);
+    margin-left: 5vw;
+  }
