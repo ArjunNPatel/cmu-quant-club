@@ -55,49 +55,29 @@ p {
     left: 5vw;
     /*top 30vh; */ 
     align-content: center;
-    font-size: calc(clamp(1rem, max(5vw,5vh),5rem));
+    font-size: clamp(1rem, max(5vw,5vh),5rem);
     font-weight: 300;
     z-index:1;
 
     }
-    #mmg_description {
-      margin-right: 10vw;
-      margin-left: 50vw;
-      font-size: calc(clamp(1rem, max(5vw,5vh),1.5rem));
-    }
-    .mmg_pic_container {
-      left: 10vw;
-      top: 5vh;
-      position: absolute;
-      width: 40vw;
-      height: 40vh;
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .mmg_pic_container img {
     
-      width: 100%;
-  height: 100%;
-  object-fit: cover;
-          
-    }
-    #quantathon_description {
+    #_description {
       margin-left: 10vw;
-      margin-right: 50vw;
-      font-size: calc(clamp(1rem, max(5vw,5vh),1.5rem));
+      margin-right: 40vw;
+      font-size: clamp(.75rem, min(5vw,5vh),1.25rem);
+      margin-top: 5vh;
     }
-    .q_pic_container {
-      right: 10vw;
+    .pic_container {
+      right: 5vw;
       top: 5vh;
       position: absolute;
-      width: 40vw;
+      width: 30vw;
       height: 40vh;
       border-radius: 16px;
       overflow: hidden;
     }
 
-    .q_pic_container img {
+    .pic_container img {
     
       width: 100%;
   height: 100%;
