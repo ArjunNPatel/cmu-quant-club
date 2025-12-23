@@ -7,23 +7,30 @@
   <link rel="stylesheet" href="home_styles.css">
 </head>
 <body>
- <section>
-
-    <div id = "header">
-      An Organization of the Department of Mathematical Sciences <br>
-      Mellon College of Science, <a href = "https://cmu.edu" style = "color: var(--cmured); text-decoration: none;">Carnegie Mellon University </a>
-       
-    </div> 
-  </section>
+   
+  <div id = "logo">
+    <a href = "index.html">
+      <img src = "QuantClubWhite.png" alt="logo" style = "width:50px;height:auto;"> 
+      </a>
+     </div>     
+  
+  <div class="nav-bar">
+    <a href="index.html" class = "clean-link" style = " color: var(--cmured)">About &ensp;</a>
+    <a href="events.html" class = "clean-link">Events &ensp;</a>
+    <a href="sponsors.html" class = "clean-link">Sponsors &ensp;</a>
+    <a href="join.html"class = "clean-link" >Join</a></p>
+  </div> 
+ 
   <section>
     <div id = "main-filler"></div>
     <div id="main-text">
-    We are  <br><span class="red"> Quant Club</span> <br> at <span class = "red"> Carnegie Mellon </span>
+    <span class="red"> Quant Club @ Carnegie Mellon </span>
     </div>
   </section>
   <div id = "about-us">
 
-    The CMU Quant Club focuses on the study of <span style= "color: var(--cmured)"> quantitative finance</span>, a branch of finance that uses advanced <span style= "color: var(--cmured)"> mathematical </span>  and <span style= "color: var(--cmured)"> computational </span> techniques. 
+     The CMU Quant Club 
+     focuses on the study of <span style= "color: var(--cmured)"> quantitative finance</span>, a branch of finance that uses advanced <span style= "color: var(--cmured)"> mathematical </span>  and <span style= "color: var(--cmured)"> computational </span> techniques. 
     We host events that help undergraduates <span style= "color: var(--cmured)"> learn </span> about and <span style= "color: var(--cmured)"> connect </span> with the quantitative finance industry; these include 
     mock interviews, resume workshops, lecture series, seminars, and our flagship events, the <span style= "color: var(--cmured)"> Quantathon </span> and the <span style= "color: var(--cmured)"> Market Making Game</span>.
   </div>
@@ -93,6 +100,70 @@ Retrieved 2025-12-20, License - CC BY-SA 4.0
          
         </div>
       </section>
+
+  <!--
+      2nd Photo carousel here 
+   -->
+
+
+<section class="carousel">
+
+  <div class="carousel__wrapper">
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_1.jpg);"></div>
+    </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_2.jpg);"></div>
+     </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_3.jpg);"></div>
+     </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_4.jpg);"></div>
+     </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_5.jpg);"></div>
+     </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_6.jpg);"></div>
+     </div>
+
+   
+    <!--#### repeat ####-->
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_1.jpg);"></div>
+    </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_2.jpg);"></div>
+     </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_3.jpg);"></div>
+     </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_4.jpg);"></div>
+     </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_5.jpg);"></div>
+     </div>
+
+    <div class="carousel__slide_2">
+      <div class="carousel__image" style="background-image: url(images/qc2_6.jpg);"></div>
+     </div>
+
+   
+  </div>
+</section>
+
       <h1 id = "Flagship-tabs-header"> Flagship Events</h1> 
       <div class="tab">
         <button class="tablinks" onclick="getEvent(event, 'Quantathon')"> Quantathon, with Goldman Sachs</button>
@@ -133,14 +204,27 @@ Retrieved 2025-12-20, License - CC BY-SA 4.0
           }
           document.getElementsByClassName('tablinks')[0].click()
           </script>
-      <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
-      <script src="waves.js" defer></script>
+  
+
+            <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+      <script src="waves.js" defer style = "z-index: -1;"></script>
     
+      <h1 class = "main-text">Board 25-26</h1>
+      <div class = "board">
+          <div> <img src="images/darreng.png"><br> President  <br> Darren Grendi</div>
+          
+        
+          <div > <img src = "images/riship.png"><br>VP Finance <br> Rishi Prabhu</div>
+          <div> <img src="images/joshuaw.png"><br> Marketing <br> Joshua Wang</div>
+          <div> <img src = "images/alexz.jfif"><br>VP Logistics <br> Alex Zheng</div>
+          <div> <img src= "images/arjunp.jpg"><br>VP Technology <br> Arjun Patel</div>
+          <div> <img src = "images/jacobb.png"><br>VP Public Relations <br> Jacob Braginsky</div>
+          <div> <img src = "images/troyw.png"><br>Secretary <br> Troy Wang</div>
+          </div> 
+
     </body>
-  <footer>  <div class="nav-bar">
-    <a href="events.html" class = "clean-link">Events &ensp;</a>
-    <a href="sponsors.html" class = "clean-link">Sponsors &ensp;</a>
-    <a href="contact.html"class = "clean-link" >Contact</a></p>
-  </div>
-</footer>
-</html>
+
+
+    <footer style = " text-align: right; margin-top: 10vh;"> <p style ="margin-right: 0;">An Organization of the Department of Mathematical Sciences <br>
+      Mellon College of Science, <a href = "https://www.cmu.edu/math/undergrad/index.html" style = "color: var(--cmured); text-decoration: none;">Carnegie Mellon University   </a></p></footer>
+  </html>
